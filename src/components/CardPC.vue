@@ -26,6 +26,9 @@
             <v-chip :style="{width:'95%'}" v-if="(tanggalValidasi != null)" label color="red darken-4" text-color="white">
                 <v-icon left>cancel</v-icon>Dibatalkan : {{tanggalValidasi}}
             </v-chip>
+            <v-chip :style="{width:'95%'}" v-if="(tanggalKeluar != null && tanggalDikerjakan != '')" label color="teal darken-4" text-color="white">
+                <v-icon left>shopping_cart</v-icon>Diambil : {{tanggalKeluar}}
+            </v-chip>
         </v-card-text>
         <v-btn @click="details" :id="idComputer" :style="{'margin-bottom':'20px'}" dark color="pink darken-4">
             View Details
