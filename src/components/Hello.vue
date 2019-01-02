@@ -63,7 +63,7 @@
                       <v-card :style="{padding:'20px'}">
                         <v-form :style="{display:'flex','margin-bottom':'10px'}" ref="formAddKeluhan" v-model="validKeluhan" lazy-validation>
                           <v-text-field
-                            :counter="20"
+                            :counter="100"
                             label="Tambahkan Keluhan Baru"
                             v-model="namaKeluhan"
                             :rules="namaKeluhanRules"
@@ -97,7 +97,7 @@
                       <v-card :style="{padding:'20px'}">
                         <v-form :style="{display:'flex','margin-bottom':'10px'}" ref="formAddKelengkapan" v-model="validKeluhan" lazy-validation>
                           <v-text-field
-                            :counter="20"
+                            :counter="100"
                             label="Tambahkan Kelengkapan Baru"
                             v-model="namaKelengkapan"
                             :rules="namaKelengkapanRules"
@@ -214,12 +214,12 @@ export default {
     namaKeluhan: '',
     namaKeluhanRules: [
       v => !!v || 'Name is required',
-      v => (v && v.length <= 20) || 'Name must be less than 10 characters'
+      v => (v && v.length <= 100) || 'Name must be less than 100 characters'
     ],
     namaKelengkapan: '',
     namaKelengkapanRules: [
       v => !!v || 'Name is required',
-      v => (v && v.length <= 20) || 'Name must be less than 10 characters'
+      v => (v && v.length <= 100) || 'Name must be less than 100 characters'
     ],
     dialogAddPC:false,
     loading : true,
